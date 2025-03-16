@@ -57,7 +57,7 @@ public class Model {
     return indexes;
   }
 
-  public Integer getLocationInMainIndex(String id) throws IOException {
+  private Integer getLocationInMainIndex(String id) throws IOException {
     AtomicReference<Integer> location = new AtomicReference<>(-1);
     List<Index> indexes = getIndexes();
     Optional<Index> indexOptional = indexes.stream().filter(index -> "all".equals(index.getName())).findFirst();
@@ -318,5 +318,29 @@ public class Model {
     } catch (IOException e) {
       e.printStackTrace();
     }
+  }
+
+  public List<Note> filterAndSort(String filterBy, String sortBy) {
+    List<Note> notes = getNotes();
+    if (filterBy != null && !filterBy.equals("all")) {
+      notes = notes.stream().filter(note -> note.getCategories().contains(filterBy)).collect(Collectors.toList());
+    }
+
+    if (sortBy != null) {
+      switch (sortBy) {
+        case "title":
+          notes.sort(Comparator.comparing(Note::getTitle));
+          break;
+        case "dateCreated":
+          notes.sort(Comparator.comparing(Note::getCreatedAt));
+          break;
+        case "dateUpdated":
+          notes.sort(Comparator.comparing(Note::getUpdatedAt).reversed());
+          break;
+        default:
+          break;
+      }
+    }
+    return notes;
   }
 }

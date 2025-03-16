@@ -10,7 +10,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import uk.ac.ucl.model.Model;
 import uk.ac.ucl.model.ModelFactory;
 import uk.ac.ucl.model.Note;
-import uk.ac.ucl.model.NoteElement;
 
 import java.io.IOException;
 

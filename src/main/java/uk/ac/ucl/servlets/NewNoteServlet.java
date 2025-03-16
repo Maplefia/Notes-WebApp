@@ -30,7 +30,6 @@ public class NewNoteServlet extends HttpServlet
       Note note = model.newNote();
       request.setAttribute("noteContent", note);
 
-      // Invoke the JSP page.
       ServletContext context = getServletContext();
       RequestDispatcher dispatch = context.getRequestDispatcher("/noteOpened.jsp");
       dispatch.forward(request, response);

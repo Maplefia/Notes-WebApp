@@ -7,9 +7,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
 public class Index {
-    String indexName;
-    List<String> noteIds;
-    String id;
+    private String indexName;
+    private List<String> noteIds;
+    private String id;
 
     @JsonCreator
     public Index(@JsonProperty("name")String indexName, @JsonProperty("notes")List<String> noteIds, @JsonProperty("id")String id) {
