@@ -70,7 +70,7 @@ public class Note {
         Optional<NoteElement> firstText = getElements().stream().filter(element -> element.getType().equals("text")).findFirst();
         firstText.ifPresentOrElse(
                 element-> {
-                    result.set(element.getContent().substring(0, Math.min(50, element.getContent().length())));
+                    result.set(element.getContent().substring(0, Math.min(70, element.getContent().length()))+ "...");
                 },
                 () -> result.set("Preview Unavailable"));
         return result.get();

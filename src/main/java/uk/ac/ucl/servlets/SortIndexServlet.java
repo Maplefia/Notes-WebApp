@@ -46,7 +46,7 @@ public class SortIndexServlet extends HttpServlet
                     notes.sort(Comparator.comparing(Note::getCreatedAt));
                     break;
                 case "dateUpdated":
-                    notes.sort(Comparator.comparing(Note::getUpdatedAt));
+                    notes.sort(Comparator.comparing(Note::getUpdatedAt).reversed());
                     break;
                 default:
                     break;

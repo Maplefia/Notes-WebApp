@@ -299,8 +299,20 @@ public class Model {
       });
       Optional<Index> editedIndex = indexes.stream().filter(index -> index.getId().equals(indexId)).findFirst();
       editedIndex.ifPresentOrElse(
-              indexes::remove,
-              () -> System.out.println("Index of this id missing..?")
+      index ->  {
+          List<Note> notes = getNotes();
+          try {
+            for (String noteId : index.getNoteIds()) {
+              Note note = notes.get(getLocationInMainIndex(noteId));
+              note.getCategories().remove(index.getName());
+            }
+            writeNotesJSON(notes);
+          } catch (IOException e) {
+            e.printStackTrace();
+          }
+          indexes.remove(index);
+          },
+        () -> System.out.println("Index of this id missing..?")
       );
       writeIndexJSON(indexes);
     } catch (IOException e) {
