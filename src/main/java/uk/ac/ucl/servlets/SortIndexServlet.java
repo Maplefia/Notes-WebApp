@@ -28,7 +28,7 @@ public class SortIndexServlet extends HttpServlet
         Model model = ModelFactory.getModel();
         String sortBy = request.getParameter("sortBy");
         String filterBy = request.getParameter("filterBy");
-        List<Note> notes = model.filterAndSort(sortBy,filterBy);
+        List<Note> notes = model.filterAndSort(filterBy,sortBy);
 
         if (filterBy != null && !filterBy.equals("all")) {
             request.setAttribute("selectedFilter", filterBy);
