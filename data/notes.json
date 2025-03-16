@@ -3,63 +3,25 @@
   "title" : "Tree",
   "elements" : [ {
     "type" : "text",
-    "content" : "Here is some text. \r\n\r\nYay",
+    "content" : "Here is a tree :)",
     "orderIndex" : 1
-  }, {
-    "type" : "url",
-    "content" : "Bad Url",
-    "orderIndex" : 3
-  }, {
-    "type" : "url",
-    "content" : "https://www.w3schools.com/tags/tag_label.asp",
-    "orderIndex" : 4
   }, {
     "type" : "image",
     "content" : "https://bocdn.ecotree.green/blog/0001/01/ad46dbb447cd0e9a6aeecd64cc2bd332b0cbcb79.jpeg?d=960x540",
     "orderIndex" : 5
-  }, {
-    "type" : "image",
-    "content" : "image.jpg",
-    "orderIndex" : 6
   } ],
   "createdAt" : "2025-03-14T20:30:42.755188Z[Europe/London]",
-  "updatedAt" : "2025-03-16T19:15:43.176524Z[Europe/London]",
+  "updatedAt" : "2025-03-16T21:21:17.991887Z[Europe/London]",
   "categories" : [ ]
 }, {
-  "id" : "4",
-  "title" : "Bee",
+  "id" : "2",
+  "title" : "For whoever's marking this...",
   "elements" : [ {
     "type" : "text",
-    "content" : "buzz\r\n\r\ntext",
+    "content" : "Hello :)\r\n\r\nYou can add text, images and urls using the buttons on the bottom. If you add an invalid url or image the note will tell you so!\r\n\r\nYou can also add categories by going to the Edit Categories page on the Home Screen. It works similarly to this.\r\n\r\nHave fun!",
     "orderIndex" : 0
   } ],
-  "createdAt" : "2025-03-14T23:09:40.755011Z[Europe/London]",
-  "updatedAt" : "2025-03-16T17:27:21.283111Z[Europe/London]",
-  "categories" : [ "tree" ]
-}, {
-  "id" : "5",
-  "title" : "Untitled Note",
-  "elements" : [ {
-    "type" : "text",
-    "content" : "Replace me with text...",
-    "orderIndex" : 0
-  } ],
-  "createdAt" : "2025-03-15T15:30:23.365519Z[Europe/London]",
-  "updatedAt" : "2025-03-16T19:16:13.592933Z[Europe/London]",
-  "categories" : [ "try" ]
-}, {
-  "id" : "6",
-  "title" : "Untitled Note",
-  "elements" : [ {
-    "type" : "text",
-    "content" : "Replace me with text...",
-    "orderIndex" : 0
-  }, {
-    "type" : "image",
-    "content" : "image.jpg",
-    "orderIndex" : 1
-  } ],
-  "createdAt" : "2025-03-15T15:55:59.025425Z[Europe/London]",
-  "updatedAt" : "2025-03-15T15:58:35.157630Z[Europe/London]",
-  "categories" : [ ]
+  "createdAt" : "2025-03-16T20:01:04.080550Z[Europe/London]",
+  "updatedAt" : "2025-03-16T21:21:37.872093Z[Europe/London]",
+  "categories" : [ "Example Category" ]
 } ]
