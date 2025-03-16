@@ -1,0 +1,142 @@
+body {
+    background-color: rgb(218, 255, 239);
+    font-size: max(1.7vw, 15px);
+    margin: 0;
+}
+
+p, pre {
+    color: rgb(69, 86, 94);
+    font: inherit;
+}
+
+a {
+    color: rgb(69, 86, 94);
+}
+
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    outline: inherit;
+}
+
+h3 {
+    color: rgb(43, 54, 59);
+}
+
+textarea, input {
+    background: none;
+    color: inherit;
+    border: solid;
+    border-radius:15px;
+    border-width: 2px;
+    border-color: rgb(100, 182, 172);
+    margin-block: 5px;
+    padding: 5px;
+    width:80vw;
+    min-height: 50px;
+    font: inherit;
+    outline: inherit;
+}
+
+.Navbar {
+    display:flex;
+    list-style: none;
+    background-color: rgb(100, 182, 172);
+}
+
+.Navbar > div {
+    padding: 20px;
+    cursor: pointer;
+}
+
+.Navbar > div > a {
+    text-decoration: none;
+    color: black;
+}
+
+.noteTitleBar {
+    padding-left: 1vw;
+    padding:right: 1vw;
+}
+
+.noteContents {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-left: 1vw;
+    padding:right: 1vw;
+}
+
+.noteImage {
+    display: flex;
+    justify-content: center;
+}
+.noteImage > img {
+    margin-block: 1vw;
+    max-width: 80vw;
+}
+
+.editElementWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.deleteElement {
+    background-color: rgb(100, 182, 172);
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: rgb(192, 253, 251);
+    padding:5px;
+    margin: 10px;
+
+}
+
+
+.addElements {
+    position: fixed;
+    bottom: 0;
+    display:flex;
+    background-color: rgb(100, 182, 172);
+    min-height: 40px;
+    height:5vw;
+    width:100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.addElements > button {
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: rgb(192, 253, 251);
+    padding:5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.addElements > button:active {
+     transform: translateY(4px);
+}
+
+.buffer {
+    height: 8vw;
+}
+
+.CategoryWrapper {
+    padding-left: 1vw;
+    padding:right: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.CategoryPicker {
+    display: flex;
+}
+
+.categoryPicker > input {
+    width: 2vw;
+}

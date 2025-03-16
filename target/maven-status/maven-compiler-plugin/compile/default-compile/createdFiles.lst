@@ -1,0 +1,4 @@
+uk/ac/ucl/model/Note.class
+uk/ac/ucl/model/NoteElement.class
+uk/ac/ucl/servlets/NoteContentServlet.class
+uk/ac/ucl/servlets/NoteIndexServlet.class

@@ -1,0 +1,119 @@
+body {
+    background-color: rgb(218, 255, 239);
+    margin: 0;
+    font-size: max(1.7vw, 15px);
+
+}
+
+form {
+    margin-block: 0;
+}
+
+p {
+    color: rgb(69, 86, 94);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+input {
+    background: white;
+    color: inherit;
+    border: solid;
+    border-radius:15px;
+    border-width: 2px;
+    border-color: rgb(192, 253, 251);
+    margin-block: 5px;
+    padding: 5px;
+    font: inherit;
+    outline: inherit;
+}
+
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    outline: inherit;
+    cursor: pointer;
+}
+
+h3 {
+    color: rgb(43, 54, 59);
+}
+
+.Navbar {
+    display:flex;
+    justify-content: space-between;
+    list-style: none;
+    background-color: rgb(100, 182, 172);
+    height: 5vh;
+    padding: 1vw;
+    width: 100%;
+}
+
+.NavbarButton {
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: rgb(192, 253, 251);
+    padding:5px;
+    margin: 10px;
+    cursor: pointer;
+    min-width: 5vw;
+}
+
+.Navbar > div {
+    display: flex;
+    align-items: center;
+}
+
+.NavbarLeft > a, form {
+    margin-left: 1vw;
+    margin-right:1vw;
+}
+
+select {
+    background: white;
+    color: inherit;
+    padding: 0;
+    font: inherit;
+    border: none;
+}
+
+.SearchBar {
+    margin-right:2vw;
+}
+
+.NotesIndexContainer {
+    margin: 2%;
+}
+
+.NotesIndexWrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.NotesIndexWrapper > form {
+    margin: 0;
+}
+
+
+.NotesIndexElement {
+    background-color: rgb(100, 182, 172);
+    cursor: pointer;
+    border-radius: 15px;
+    width: 30vw;
+    padding: 0.5vw;
+    margin: 0.5vw;
+}
+
+.NotesIndexElement > p, h3 {
+    max-width: 25vw;
+    max-height:100vw;
+}
