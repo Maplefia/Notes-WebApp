@@ -28,29 +28,15 @@ public class SortIndexServlet extends HttpServlet
         Model model = ModelFactory.getModel();
         String sortBy = request.getParameter("sortBy");
         String filterBy = request.getParameter("filterBy");
-        List<Note> notes = model.getNotes();
+        List<Note> notes = model.filterAndSort(sortBy,filterBy);
 
         if (filterBy != null && !filterBy.equals("all")) {
-            notes = notes.stream().filter(note -> note.getCategories().contains(filterBy)).collect(Collectors.toList());
             request.setAttribute("selectedFilter", filterBy);
         } else {
             request.setAttribute("selectedFilter", "all");
         }
 
         if (sortBy != null) {
-            switch(sortBy) {
-                case "title":
-                    notes.sort(Comparator.comparing(Note::getTitle));
-                    break;
-                case "dateCreated":
-                    notes.sort(Comparator.comparing(Note::getCreatedAt));
-                    break;
-                case "dateUpdated":
-                    notes.sort(Comparator.comparing(Note::getUpdatedAt).reversed());
-                    break;
-                default:
-                    break;
-            }
             request.setAttribute("selectedSort", sortBy);
         } else {
             request.setAttribute("selectedSort", "dateCreated");
@@ -60,7 +46,6 @@ public class SortIndexServlet extends HttpServlet
         request.setAttribute("notes", notes);
         request.setAttribute("allCategories", model.getAllCategories());
 
-        // Invoke the JSP page.
         ServletContext context = getServletContext();
         RequestDispatcher dispatch = context.getRequestDispatcher("/index.jsp");
         dispatch.forward(request, response);
