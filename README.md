@@ -1,2 +1,2 @@
 # JavaCoursework
-Coursework for COMP0004
+A simple web application to make notes with.
